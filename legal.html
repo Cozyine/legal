@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoLookup v3 - Legal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        header p {
+            color: #666;
+            margin-top: 5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            font-size: 15px;
+            color: #666;
+            cursor: pointer;
+            padding: 8px 0;
+            position: relative;
+        }
+
+        nav button.active {
+            color: #1a1a1a;
+            font-weight: 500;
+        }
+
+        nav button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -16px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #1a1a1a;
+        }
+
+        nav button:hover {
+            color: #1a1a1a;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            color: #1a1a1a;
+        }
+
+        h3 {
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 12px;
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 12px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            border: 1px solid #e0e0e0;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f5f5f5;
+            font-weight: 500;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #666;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav button.active::after {
+                display: none;
+            }
+
+            nav button {
+                padding: 8px 12px;
+                background: #f5f5f5;
+                border-radius: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>RoLookup v3</h1>
+            <p>Legal Documents</p>
+        </header>
+
+        <nav>
+            <button class="nav-btn active" data-target="privacy">Privacy Policy</button>
+            <button class="nav-btn" data-target="tos">Terms of Service</button>
+        </nav>
+
+        <div id="privacy" class="content active">
+            <p class="last-updated"><strong>Last Updated:</strong> March 29, 2026</p>
+
+            <h2>1. Introduction</h2>
+            <p>RoLookup v3 ("the Bot") is a Discord bot that provides Roblox account lookup services. This Privacy Policy explains what data we collect, how we use it, and your rights regarding your personal information.</p>
+            <p>By using the Bot, you agree to the collection and use of information as described in this policy.</p>
+
+            <h2>2. Information We Collect</h2>
+
+            <h3>2.1 Discord User Data</h3>
+            <ul>
+                <li><strong>Discord User ID</strong> - Used to link your Discord account to Roblox accounts</li>
+                <li><strong>Server/Guild ID</strong> - For server-specific configurations</li>
+            </ul>
+
+            <h3>2.2 Roblox User Data</h3>
+            <ul>
+                <li><strong>Roblox User ID</strong> - Unique identifier for Roblox accounts</li>
+                <li><strong>Roblox Username</strong> - Current Roblox display name</li>
+                <li><strong>Roblox Profile URL</strong> - Generated link to the Roblox profile</li>
+            </ul>
+
+            <h3>2.3 Server Configuration Data</h3>
+            <p>Server administrators can configure the following, which we store:</p>
+            <ul>
+                <li><strong>Custom Command Prefixes</strong> - Custom triggers for bot commands</li>
+                <li><strong>Ignored Channels</strong> - Channel IDs where commands are disabled</li>
+                <li><strong>Whitelisted Roles</strong> - Role IDs that have command access</li>
+                <li><strong>Update Channels</strong> - Channel IDs for bot update announcements</li>
+                <li><strong>Update Roles</strong> - Role IDs to ping for updates</li>
+            </ul>
+
+            <h3>2.4 Privacy Settings</h3>
+            <ul>
+                <li><strong>Privacy Mode Preference</strong> - Whether you've enabled auto-deletion of command messages</li>
+            </ul>
+
+            <h3>2.5 Automatically Collected Data</h3>
+            <ul>
+                <li><strong>Command Usage Logs</strong> - Anonymous logs containing timestamps and command types only (no user identifiers). Used solely for error debugging and troubleshooting.</li>
+                <li><strong>Error Logs</strong> - Anonymous technical information (e.g., error messages, stack traces) collected only when errors occur. No personal data is included.</li>
+            </ul>
+
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the collected data for the following purposes:</p>
+            <ul>
+                <li><strong>Account Linking</strong> - To associate Discord accounts with Roblox accounts for quick lookups</li>
+                <li><strong>Command Execution</strong> - To provide requested Roblox user information</li>
+                <li><strong>Server Configuration</strong> - To respect administrator settings (prefixes, ignored channels, role restrictions)</li>
+                <li><strong>Privacy Mode</strong> - To automatically delete command messages when enabled</li>
+                <li><strong>Update Broadcasts</strong> - To notify servers about bot updates (if configured)</li>
+                <li><strong>Error Resolution</strong> - To debug and fix technical issues</li>
+            </ul>
+            <p>We do not sell, rent, or trade your personal information with third parties.</p>
+
+            <h2>4. Data Storage and Retention</h2>
+
+            <h3>4.1 Storage Method</h3>
+            <p>All data is stored in a SQLite database on our secure servers.</p>
+
+            <h3>4.2 Retention Periods</h3>
+            <table>
+                <tr><th>Data Type</th><th>Retention Period</th></tr>
+                <tr><td>Discord-Roblox Links</td><td>Indefinite (until manually removed)</td></tr>
+                <tr><td>Privacy Settings</td><td>Indefinite (until changed by user)</td></tr>
+                <tr><td>Server Configurations</td><td>Indefinite (until server leaves or admin removes)</td></tr>
+                <tr><td>Command Logs</td><td>Indefinite (stored anonymously)</td></tr>
+            </table>
+
+            <h3>4.3 Data Security</h3>
+            <p>We implement reasonable security measures to protect your data, including secure storage of database files and restricted access to server infrastructure.</p>
+
+            <h2>5. Third-Party Services</h2>
+            <p>The Bot interacts with the following third-party services to provide its functionality:</p>
+
+            <h3>5.1 Roblox Corporation APIs</h3>
+            <p>We use official Roblox APIs to fetch user information including username, groups, outfits, and account details.</p>
+            <ul>
+                <li><strong>Data Shared:</strong> Roblox User IDs, usernames</li>
+                <li><strong>Purpose:</strong> Fetching Roblox account information for lookups</li>
+            </ul>
+
+            <h3>5.2 Rolimons API</h3>
+            <p>We use Rolimons to fetch limited item values and player inventories.</p>
+            <ul>
+                <li><strong>Data Shared:</strong> Roblox User IDs, item IDs</li>
+                <li><strong>Purpose:</strong> Providing item values and inventory information</li>
+            </ul>
+
+            <h3>5.3 Hermivore API (Optional)</h3>
+            <p>We may use Hermivore for Discord-Roblox account linking.</p>
+            <ul>
+                <li><strong>Data Shared:</strong> Discord User IDs, Roblox authentication data</li>
+                <li><strong>Purpose:</strong> Verifying Discord-Roblox account ownership</li>
+            </ul>
+
+            <h3>5.4 Self-Hosted API (Optional)</h3>
+            <p>We may use a self-hosted API service for account linking.</p>
+            <ul>
+                <li><strong>Data Shared:</strong> Discord User IDs, Roblox authentication data</li>
+                <li><strong>Purpose:</strong> Verifying Discord-Roblox account ownership</li>
+            </ul>
+
+            <h3>5.5 BloxLink Integration (Optional)</h3>
+            <p>We may use BloxLink's channel-based verification system.</p>
+            <ul>
+                <li><strong>Data Shared:</strong> Discord User IDs</li>
+                <li><strong>Purpose:</strong> Alternative method for verifying Discord-Roblox account ownership</li>
+            </ul>
+
+            <h2>6. Your Rights</h2>
+
+            <h3>6.1 Access to Your Data</h3>
+            <p>You may request a copy of your personal data by contacting the bot developers (see Section 10).</p>
+
+            <h3>6.2 Data Deletion</h3>
+            <ul>
+                <li><strong>Discord-Roblox Links:</strong> There is no user-accessible command to delete linked accounts. Contact bot developers for manual removal.</li>
+                <li><strong>Privacy Settings:</strong> Use the <code>.privacy</code> command to toggle your privacy preference.</li>
+                <li><strong>Server Configurations:</strong> Server administrators can remove configurations using the following commands:
+                    <ul>
+                        <li><code>.setprefix reset</code> - Remove custom prefix</li>
+                        <li><code>.unignorechannel</code> - Remove channel ignore</li>
+                        <li><code>.unwhitelistrole</code> - Remove role whitelist</li>
+                        <li><code>.removeupdates</code> - Remove update channel configuration</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>6.3 Opt-Out Rights</h3>
+            <ul>
+                <li>You can prevent the Bot from processing your commands by not using the Bot</li>
+                <li>Server administrators can ignore channels or whitelist roles to restrict Bot access</li>
+                <li>You can enable privacy mode (<code>.privacy</code>) to auto-delete command messages</li>
+            </ul>
+
+            <h2>7. Children's Privacy</h2>
+            <p>The Bot is not intended for users under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected data from a child under 13, we will take steps to delete it promptly.</p>
+
+            <h2>8. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Users will be notified of significant changes through bot update announcements (if update channels are configured) and by updating the "Last Updated" date at the top of this document.</p>
+            <p>We encourage users to review this policy periodically.</p>
+
+            <h2>9. Data Security</h2>
+            <p>We implement reasonable security measures to protect your data. In the event of a data breach that compromises user data, we will investigate the incident, notify affected users where possible, and take corrective action.</p>
+
+            <h2>10. Contact Us</h2>
+            <p>If you have questions about this Privacy Policy or wish to request data deletion, contact us:</p>
+            <ul>
+                <li><strong>Support Server:</strong> [Insert your support server invite link]</li>
+                <li><strong>Bot Owner:</strong> [Insert contact method - Discord tag or email]</li>
+            </ul>
+
+            <h2>11. GDPR Notice (European Users)</h2>
+            <p>For users in the European Economic Area (EEA), our legal basis for processing data is:</p>
+            <ul>
+                <li><strong>Consent</strong> - By using the Bot, you consent to data processing as described</li>
+                <li><strong>Legitimate Interests</strong> - Processing necessary for providing requested services</li>
+            </ul>
+
+            <h2>12. CCPA Notice (California Users)</h2>
+            <p>California residents have the right to:</p>
+            <ul>
+                <li>Know what personal data is collected</li>
+                <li>Know if personal data is sold or disclosed (we do not sell data)</li>
+                <li>Request deletion of personal data</li>
+                <li>Non-discrimination for exercising privacy rights</li>
+            </ul>
+            <p>We do not sell personal information to third parties.</p>
+        </div>
+
+        <div id="tos" class="content">
+            <p class="last-updated"><strong>Last Updated:</strong> March 29, 2026</p>
+
+            <h2>1. Agreement to Terms</h2>
+            <p>By adding RoLookup v3 ("the Bot") to your Discord server or using the Bot in any way, you agree to be bound by these Terms of Service. If you do not agree to these terms, do not use the Bot.</p>
+            <p>These terms apply to all users, including server owners, administrators, moderators, and regular users.</p>
+
+            <h2>2. Description of Service</h2>
+            <p>RoLookup v3 is a Discord bot that provides Roblox account lookup and verification services, including:</p>
+            <ul>
+                <li>Discord to Roblox account lookups</li>
+                <li>Roblox username searches</li>
+                <li>Roblox group membership information</li>
+                <li>Roblox username history</li>
+                <li>Roblox outfit/avatar viewing</li>
+                <li>Limited item value lookups</li>
+                <li>Server configuration options (prefixes, channel restrictions, role whitelists)</li>
+                <li>Privacy mode for auto-deleting command messages</li>
+            </ul>
+
+            <h2>3. Eligibility</h2>
+
+            <h3>3.1 Age Requirement</h3>
+            <p>You must be at least 13 years old to use this Bot.</p>
+
+            <h3>3.2 Discord Requirements</h3>
+            <p>You must have a valid Discord account and be a member of a Discord server where the Bot is installed.</p>
+
+            <h3>3.3 Roblox Requirements</h3>
+            <p>Some features require a valid Roblox account. You are responsible for compliance with Roblox's Terms of Service when using this Bot.</p>
+
+            <h2>4. User Responsibilities</h2>
+
+            <h3>4.1 Acceptable Use</h3>
+            <p>You agree to use the Bot only for lawful purposes and in accordance with these terms. You agree not to:</p>
+            <ul>
+                <li>Use the Bot to harass, abuse, or harm other users</li>
+                <li>Attempt to bypass Bot restrictions or rate limits</li>
+                <li>Use the Bot to violate Discord's Terms of Service or Community Guidelines</li>
+                <li>Use the Bot to violate Roblox's Terms of Service or Community Standards</li>
+                <li>Attempt to access other users' data without authorization</li>
+                <li>Use the Bot for any commercial purposes without explicit permission</li>
+                <li>Reverse engineer, decompile, or attempt to extract the Bot's source code</li>
+                <li>Interfere with or disrupt the Bot's servers or networks</li>
+            </ul>
+
+            <h3>4.2 Server Administrator Responsibilities</h3>
+            <p>If you are a server administrator, you agree to:</p>
+            <ul>
+                <li>Configure the Bot responsibly and in accordance with your server's rules</li>
+                <li>Inform your members about the Bot's data collection practices</li>
+                <li>Respect user privacy settings configured through the Bot</li>
+                <li>Remove the Bot from your server if you no longer wish to use its services</li>
+            </ul>
+
+            <h2>5. Bot Permissions</h2>
+            <p>By adding the Bot to your server, you grant the following permissions:</p>
+            <ul>
+                <li><strong>View Channels</strong> - To read messages and process commands</li>
+                <li><strong>Send Messages</strong> - To respond to commands</li>
+                <li><strong>Manage Messages</strong> - To delete messages (privacy mode, purge command)</li>
+                <li><strong>Embed Links</strong> - To display rich embed responses</li>
+                <li><strong>Read Message History</strong> - To fetch message context</li>
+                <li><strong>Use External Emojis</strong> - To use custom emojis in responses</li>
+                <li><strong>Attach Files</strong> - To send images (outfit previews)</li>
+            </ul>
+            <p>You acknowledge that these permissions are necessary for the Bot's functionality.</p>
+
+            <h2>6. Rate Limits and Restrictions</h2>
+            <p>The Bot implements the following rate limits to ensure fair usage:</p>
+            <ul>
+                <li><strong>Per-User Cooldown:</strong> 1 second between commands</li>
+                <li><strong>Scan Rate Limit:</strong> 10 scans per 60 seconds (global)</li>
+                <li><strong>Privacy Command:</strong> 60 second cooldown</li>
+            </ul>
+            <p>Bot owners reserve the right to implement additional restrictions or blacklist abusive users/servers.</p>
+
+            <h2>7. Data and Privacy</h2>
+            <p>By using the Bot, you acknowledge that:</p>
+            <ul>
+                <li>Your Discord ID and Roblox account information will be stored</li>
+                <li>Your command usage will be logged (anonymously)</li>
+                <li>Data is stored indefinitely unless manually removed</li>
+                <li>Third-party services (Roblox, Rolimons, Hermivore) will receive relevant data</li>
+            </ul>
+            <p>For full details, see our <a href="#" onclick="switchTab('privacy'); return false;">Privacy Policy</a>.</p>
+
+            <h2>8. Service Availability</h2>
+
+            <h3>8.1 No Guarantee of Uptime</h3>
+            <p>We strive to maintain service availability but do not guarantee uninterrupted service. The Bot may experience downtime due to:</p>
+            <ul>
+                <li>Maintenance and updates</li>
+                <li>Technical issues</li>
+                <li>Discord API outages</li>
+                <li>Roblox API outages</li>
+                <li>Events beyond our control</li>
+            </ul>
+
+            <h3>8.2 Service Modifications</h3>
+            <p>We reserve the right to:</p>
+            <ul>
+                <li>Modify or discontinue features at any time</li>
+                <li>Change rate limits or usage restrictions</li>
+                <li>Add or remove third-party integrations</li>
+                <li>Update the Bot's functionality without prior notice</li>
+            </ul>
+
+            <h2>9. Intellectual Property</h2>
+
+            <h3>9.1 Bot Ownership</h3>
+            <p>RoLookup v3 is the intellectual property of the bot developers. All rights are reserved.</p>
+
+            <h3>9.2 Trademarks</h3>
+            <ul>
+                <li>"Roblox" is a registered trademark of Roblox Corporation</li>
+                <li>"Discord" is a registered trademark of Discord Inc.</li>
+                <li>"Rolimons" is a trademark of its respective owners</li>
+            </ul>
+            <p>This Bot is not affiliated with, endorsed by, or sponsored by Roblox Corporation, Discord Inc., or Rolimons.</p>
+
+            <h3>9.3 License</h3>
+            <p>The Bot's source code is provided for personal use only. You may not:</p>
+            <ul>
+                <li>Copy, distribute, or sell the Bot</li>
+                <li>Create derivative works without permission</li>
+                <li>Use the Bot for commercial purposes without explicit consent</li>
+            </ul>
+
+            <h2>10. Third-Party Services</h2>
+            <p>The Bot integrates with third-party services. Your use of these services is subject to their respective terms:</p>
+            <table>
+                <tr><th>Service</th><th>Terms of Service</th><th>Privacy Policy</th></tr>
+                <tr><td>Roblox</td><td><a href="https://en.help.roblox.com/hc/en-us/articles/115004647846" target="_blank" rel="noopener">roblox.com/terms</a></td><td><a href="https://en.help.roblox.com/hc/en-us/articles/115004630823" target="_blank" rel="noopener">roblox.com/privacy</a></td></tr>
+                <tr><td>Discord</td><td><a href="https://discord.com/terms" target="_blank" rel="noopener">discord.com/terms</a></td><td><a href="https://discord.com/privacy" target="_blank" rel="noopener">discord.com/privacy</a></td></tr>
+                <tr><td>Rolimons</td><td><a href="https://www.rolimons.com/terms" target="_blank" rel="noopener">rolimons.com/terms</a></td><td><a href="https://www.rolimons.com/privacy" target="_blank" rel="noopener">rolimons.com/privacy</a></td></tr>
+            </table>
+
+            <h2>11. Disclaimers</h2>
+
+            <h3>11.1 "As Is" Service</h3>
+            <p>THE BOT IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</p>
+
+            <h3>11.2 Accuracy Disclaimer</h3>
+            <p>We do not guarantee the accuracy, completeness, or timeliness of information provided by the Bot. Roblox data is fetched from external APIs and may be outdated or incorrect.</p>
+
+            <h3>11.3 No Professional Advice</h3>
+            <p>The Bot does not provide legal, financial, or professional advice. Item values and trading information should not be considered financial guidance.</p>
+
+            <h2>12. Limitation of Liability</h2>
+            <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, OR GOODWILL ARISING FROM YOUR USE OF THE BOT.</p>
+            <p>YOU ARE SOLELY RESPONSIBLE FOR YOUR USE OF THE BOT AND ANY CONSEQUENCES THEREOF.</p>
+
+            <h2>13. Termination</h2>
+
+            <h3>13.1 By User</h3>
+            <p>You may stop using the Bot at any time. Server administrators can remove the Bot from their server.</p>
+
+            <h3>13.2 By Bot Owners</h3>
+            <p>We reserve the right to:</p>
+            <ul>
+                <li>Suspend or terminate your access to the Bot at our sole discretion</li>
+                <li>Remove the Bot from any server without notice</li>
+                <li>Ban users who violate these terms</li>
+            </ul>
+
+            <h3>13.3 Effect of Termination</h3>
+            <p>Upon termination:</p>
+            <ul>
+                <li>Your right to use the Bot ceases immediately</li>
+                <li>Server configurations may be deleted</li>
+                <li>Stored data may be retained per our Privacy Policy</li>
+            </ul>
+
+            <h2>14. Changes to Terms</h2>
+            <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting the updated terms. Significant changes will be communicated through bot update announcements (if configured).</p>
+            <p>Your continued use of the Bot after changes constitutes acceptance of the new terms.</p>
+
+            <h2>15. Contact Information</h2>
+            <p>For questions, concerns, or requests regarding these terms:</p>
+            <ul>
+                <li><strong>Support Server:</strong> [Insert your support server invite link]</li>
+                <li><strong>Bot Owner:</strong> [Insert contact method - Discord tag or email]</li>
+            </ul>
+
+            <h2>16. Entire Agreement</h2>
+            <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and the Bot developers regarding your use of the Bot.</p>
+
+            <p style="margin-top: 30px; font-weight: 500;">By using RoLookup v3, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service and our Privacy Policy.</p>
+        </div>
+
+        <footer>
+            <p>RoLookup v3 Discord Bot</p>
+        </footer>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.nav-btn');
+        const contents = document.querySelectorAll('.content');
+
+        function switchTab(tabId) {
+            buttons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.target === tabId);
+            });
+            contents.forEach(content => {
+                content.classList.toggle('active', content.id === tabId);
+            });
+            window.scrollTo(0, 0);
+        }
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                switchTab(button.dataset.target);
+            });
+        });
+
+        const hash = window.location.hash.slice(1);
+        if (hash === 'tos') {
+            switchTab('tos');
+        }
+    </script>
+</body>
+</html>
